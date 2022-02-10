@@ -1,25 +1,41 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from "vue-router";
+
+import Today from "../views/Today";
+
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "today",
+    component: Today
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/tomorrow",
+    name: "tomorrow",
+    // 组件懒加载，点击的时候再加载对应的组件
+    component: () => import("../views/Tomorrow")
+  },
+  {
+    path: "/week",
+    name: "week",
+    component: () => import("../views/Week")
+  },
+  {
+    path: "/month",
+    name: "month",
+    component: () => import("../views/Month")
+  },
+  {
+    path: "/year",
+    name: "year",
+    component: () => import("../views/Year")
   }
-]
+
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
-export default router
+export default router;
