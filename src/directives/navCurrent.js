@@ -17,6 +17,7 @@ export default {
     // 拼接前面要加空格，避免与旧类名连接在一起
     oNavItem[curIdx].className += ` ${activeClass}`;
   },
+
   // updated函数是在点击别的子组件时，生效的函数
   updated(el, binding, vnode) {
     const { className, activeClass, curIdx } = binding.value;

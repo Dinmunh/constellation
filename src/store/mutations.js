@@ -7,7 +7,7 @@ export default {
   setType(state, type) {
     state.type = type;
   },
-  // 修改错误代码
+  // 修改错误码
   setErrorCode(state, errorCode) {
     state.errorCode = errorCode;
   },
