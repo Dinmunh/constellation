@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import { useStore } from "vuex";
-
 export default {
   name: "Card",
   props: {
